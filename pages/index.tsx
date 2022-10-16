@@ -22,11 +22,19 @@ const Home = () => {
 
   return (
     <div className="w-full h-screen">
-      <Canvas ref={canvasRef}>
+      {/* @ts-ignore */}
+      <Canvas colorManagement shadowMap>
         <CameraController />
+        <fog attach="fog" args={["white", 0, 40]} />
+        <ambientLight intensity={0.3} />
+        <directionalLight
+          intensity={2.5}
+          position={[-6, 4, 5]}
+          castShadow
+          shadow-mapSize-height={512}
+          shadow-mapSize-width={512}
+        />
         <React.Suspense fallback={null}>
-        <pointLight position={[10, 10, 10]} />
-          <ambientLight intensity={0.5} />
           <Model />
         </React.Suspense>
       </Canvas>
