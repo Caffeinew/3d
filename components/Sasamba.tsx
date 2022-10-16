@@ -908,7 +908,7 @@ export default function Model(props) {
         rotation={[0, Math.PI / 6, 0]}
       />
       <mesh
-        castShadow
+        // castShadow
         receiveShadow
         geometry={nodes.floor.geometry}
         material={nodes.floor.material}
