@@ -1,6 +1,6 @@
 import React from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import Model from "../components/Sasamba";
+import Model from "../components/Test_scene";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const Home = () => {
@@ -32,6 +32,8 @@ const Home = () => {
          intensity={2}
          shadow-mapSize-width={1024}
          shadow-mapSize-height={1024}
+         shadow-radius={5}
+    
      
         />
         <React.Suspense fallback={null}>
